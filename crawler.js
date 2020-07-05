@@ -7,9 +7,7 @@ module.exports = url => {
             const data = await makeApiCalls('get', url);
             let smallestString = '';
             smallestString = await getSmallestString(data, url);
-            if (smallestString !== '') {
-                resolve(smallestString);
-            }
+            resolve(smallestString);
         }
          catch (e) {
              reject(e);
